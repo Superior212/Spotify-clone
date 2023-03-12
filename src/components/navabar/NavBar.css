@@ -1,0 +1,148 @@
+html{
+    font-size: 62.5%;
+    font-family:  'Poppins';
+    color: #676669;
+    font-weight:400;
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar{
+    width:.8rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 1rem;
+}
+a{
+    text-decoration: none;
+    display: block;
+    color: var(--text-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+:root{
+    --primary-color: #ffc876;
+    --text-color: #676669;
+    --second-color: #303030;
+    --third-color: #121212;
+}
+
+#navbar{
+    background-color: #fff;
+    width: calc(100% / 4);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    overflow:hidden;
+}
+.navbar-container{
+    padding:3rem;
+    border-top-left-radius: 2rem;
+}
+#navbar header{
+    text-align: right;
+    font-size:1.4rem;
+    transition: .25s;
+    cursor: pointer;
+    height:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navbar header i:hover{
+    color:#000
+}
+#navbar .logo{
+    padding:2rem 0;
+    font-size:2rem;
+    color: #000;
+    font-size:1.6rem;
+}
+#navbar .logo span{
+    padding:0;
+}
+.navbar__logo{
+    font-size:3rem;
+    color:var(--primary-color) ;
+    padding-right:1rem;
+}
+.navbar__primary-text{
+    color: var(--primary-color) !important
+}
+.navbar-content__icon{
+    display: block;
+    padding:1rem;
+    border-radius:1rem;
+    font-size:1.4rem;
+    position:relative;
+} 
+.navbar-content__icon:hover{
+    background-color: #000;
+    transition: .25s linear;
+    cursor: pointer;
+}
+.navbar-content__icon:hover a{
+    color:#fff;
+}
+.navbar-content__icon:after {
+    position: absolute;
+    content:'';
+    background-color: #000;
+    display: block;
+    height:100%;
+    width:.2rem;
+    right:-3rem;
+    top:0;
+    opacity:0;
+}
+.navbar-content__icon:hover:after{
+    opacity: 1;
+    transition: .25s;
+}
+.navbar-content__icon i{
+    display: inline-block;
+    width:2rem;
+    background-color: transparent;
+    margin-right:1.5rem;
+}
+.navbar-content__title{
+    font-size:1.2rem;
+    color:grey;
+    margin:.8rem
+}
+.navbar-user{
+    margin-top:2rem;
+    border-bottom-left-radius: 2rem;
+    border-top:1px solid #dbdbdb;
+}
+.navbar-user__container{
+    display: flex;
+    height:3.5rem;
+    margin:1rem;
+    padding:3rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-avt{
+    height:3.5rem; width:3.5rem;
+    border-radius: 50%;
+    overflow:hidden
+}
+.user-avt img{
+    height:100%;
+    object-fit: cover;
+}
+.user-name{
+    padding-left:1rem;
+    font-size:1.3rem;
+    color:#000;
+    flex:1;
+}
+.navbar-user i{
+    font-size:1.4rem;
+    color:#000;
+}
