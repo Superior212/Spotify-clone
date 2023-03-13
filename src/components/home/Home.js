@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../navBar/NavBar'
 import Main from '../main/Main'
-import Sidebar from '../sideBar/SideBar'
+import sideBar from '../sideBar/SideBar'
 import './Home.css';
 import Logout from '../logout/Logout';
 
@@ -13,7 +13,7 @@ const Home = () => {
 
                <Navbar />
                <Main />
-                <Sidebar />
+               <sideBar/>
       </div>
     </div>
     <Logout/>

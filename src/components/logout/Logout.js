@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-// import  logout  from "./logout/Logout";
 import { Navigate, useNavigate } from "react-router-dom";
+import "./Logout.css";
 
 function Logout() {
   const navigate = useNavigate();
@@ -16,8 +16,7 @@ function Logout() {
 
   return (
     <div className="logout">
-      <h1>You have been successfully logged out.</h1>
-      <button onClick={handleLogout}>Back to Login</button>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 }

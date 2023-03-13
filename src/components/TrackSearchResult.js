@@ -1,8 +1,13 @@
 import React from 'react'
+import "./TrackSearchResult.css";
 
-const TrackSearchResult = () => {
+const TrackSearchResult = ({track}) => {
   return (
-    <div>
+    <div className='container'>
+       <img src={track.albumUri} style={ { height: "64px", width: "64px"}} alt="" />
+            <div>{track.artist}</div>
+            <div>{track.title}</div>
+
         
     </div>
   )

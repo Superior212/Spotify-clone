@@ -11,7 +11,7 @@ import tócTiên from '../../assests/img/tóc-tiên.jpg';
 import min from '../../assests/img/min.jpg';
 import ngô from '../../assests/img/ngô-lan-hương.jpg';
 
-function Sidebar() {
+function SideBar() {
   return (
     <div id="sidebar">
       <div className="sidebar__shortcuts">
@@ -82,4 +82,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default SideBar;

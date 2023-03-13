@@ -26,7 +26,9 @@ import fire from "../../assests/img/fire.png";
 import SpotifyWebApi from "spotify-web-api-node";
 // import useAuth from "./useAuth";
 import axios from "axios";
-import track from "./components/TrackSearchResult";
+import TrackSearchResult from "../TrackSearchResult";
+// import TrackSearchResult from './components/TrackSearchResult';
+
 
 const spotifyApi = new SpotifyWebApi({
   clientId: "b96da533c0594f8f8f3c622613e70b64",
