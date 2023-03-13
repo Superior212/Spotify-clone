@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 const Login = () => {
   const dispatch = useDispatch();
 
-  const REDIRECT_URI = "http://localhost:3000/";
+  const REDIRECT_URI = "https://superiorspotify.netlify.app/";
   const CLIENT_ID = "b96da533c0594f8f8f3c622613e70b64";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";

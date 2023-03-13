@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1fe91595.css",
+    "main.js": "/static/js/main.168721f6.js",
+    "static/js/787.c96cc5af.chunk.js": "/static/js/787.c96cc5af.chunk.js",
+    "static/media/User.png": "/static/media/User.fced652f1c9a7eee311d.png",
+    "static/media/ngô-lan-hương.jpg": "/static/media/ngô-lan-hương.ddb88c76b58a4014565d.jpg",
+    "static/media/banner.jpg": "/static/media/banner.6953ebc6b623c7ac0ec8.jpg",
+    "static/media/fire.png": "/static/media/fire.24c11528f11b8c04cbec.png",
+    "static/media/min.jpg": "/static/media/min.ee29d927c4488e6150e0.jpg",
+    "static/media/tóc-tiên.jpg": "/static/media/tóc-tiên.39ed48647fefb515b1e6.jpg",
+    "index.html": "/index.html",
+    "main.1fe91595.css.map": "/static/css/main.1fe91595.css.map",
+    "main.168721f6.js.map": "/static/js/main.168721f6.js.map",
+    "787.c96cc5af.chunk.js.map": "/static/js/787.c96cc5af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fe91595.css",
+    "static/js/main.168721f6.js"
+  ]
+}
