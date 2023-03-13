@@ -71,7 +71,8 @@
     padding:2.5rem 2rem;
     border-radius: .6rem;
     position: relative;
-    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0)), url(/src/assests/img/banner.jpg) no-repeat center center/cover;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0)), 
+    url(/src/assests/img/banner.jpg) no-repeat center center/cover;
 }
 .main-content__banner-des{
     font-size:1.5rem;
@@ -87,6 +88,7 @@
     border: none;
     margin-right:.8rem;
     cursor: pointer;
+    display: flex;
 }
 .main-content__banner-btn button:last-child{
     margin:unset;

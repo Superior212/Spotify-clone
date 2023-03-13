@@ -1,12 +1,33 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { MdFormatQuote } from 'react-icons/md'
-import{Data} from'./components/Data'
+// import{Data} from'./components/Data'
 import './Main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faArrowLeft, faArrowRight, faSearch, faChevronRight, faHeart, faMusic, faExpandAlt, faRedo, faRandom, faStepBackward, faStepForward, faPlay, faPause, faVolumeUp, faVolumeMute, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import fire from '../../assests/img/fire.png';
+import SpotifyWebApi from 'spotify-web-api-node';
 
-function main() {
+const spotifyApi = new SpotifyWebApi({
+  clientId: '985c824960614d0997adbb23fe431b2a',
+});
+
+function Main({code}) {
+  const [search, setSearch] = useState("")
+  const [searchResults, setSearchResults] = useState([])
+  const accessToken = useAuth(code)
+
+  useEffect(() => {
+    if (!accessToken) return;
+    spotifyApi.setAccessToken(accessToken);
+    }, [accessToken]);
+
+    useEffect(() => {
+      if (!search) return setSearchResults([]);
+      if (!accessToken) return;
+      spotifyApi.searchTracks(search).then(res => {
+        console.log(res.body.tracks.items);
+      });
+    }, [search, accessToken]);
   return (
     <div id="main-content">
       <header>
@@ -19,7 +40,7 @@ function main() {
         </nav>
         <div className="main-content__search-form">
         <FontAwesomeIcon icon={faSearch} className="search-btn"></FontAwesomeIcon>
-          <input type="text" className="search-input" placeholder="Search for artist, songs....." />
+          <input type="text" className="search-input" placeholder="Search for artist, songs....." value={search} onChange={e =>setSearch(e.target.value)} />
         </div>
         {/* <FontAwesomeIcon icon={faBars}></FontAwesomeIcon> */}
       </header>
@@ -57,15 +78,7 @@ function main() {
             <p className="playlist__artist">ARTIST</p>
             <p className="playlist__time">TIME</p>
           </div>
-        </div>
-        <div className="playlist">
-              <span style={{display:'flex', justifyContent:'space-between'}}>
-              <h1>My Playlist</h1>
-              <p style={{fontSize: '13px', fontWeight: '600', paddingTop: '10px',
-            color:"#89898A"
-            }}>Show All</p>
-              </span>
-              <div>
+          {/* <div>
               <table>
                 <tr>
                   <th><MdFormatQuote /></th>
@@ -86,8 +99,10 @@ function main() {
                     ))
                   }
              </table>
-              </div>
-            </div>
+              </div> */}
+        </div>
+       
+       
       </div>
 
       <div className="play-song">
@@ -124,4 +139,4 @@ function main() {
             </div>
   )
 }
-export default main;
+export default Main;
